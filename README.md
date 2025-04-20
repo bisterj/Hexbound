@@ -91,3 +91,62 @@ Red = enemy, Blue = player, Gray = neutral
 UI: show current turn and health bars
 
 Keep it functional over pretty—for now!
+
+## File System
+
+📁 src/
+│       ├── 📁 game/              
+│       ├── 📁 grid/              
+│       ├── 📁 units/             
+│       ├── 📁 ai/                
+│       ├── 📁 input/             
+│       ├── 📁 ui/                
+│       ├── 📁 floor/             
+│       ├── 📁 assets/            
+│       └── Main.java            
+
+game/ # Core loop, main class, game states
+
+    Game.java — Main game loop
+
+    GameState.java — Enum or logic for turn states (PLAYER_TURN, ENEMY_TURN, etc.)
+
+grid/ # Hex grid logic (tiles, coordinates, rendering)
+
+    HexTile.java — Represents a hex tile
+
+    HexGrid.java — Manages tile placement and rendering
+
+    HexMath.java — Axial coordinate helpers, distance, conversions, etc.
+
+units/ # Player and enemy classes
+
+    Unit.java — Base class
+
+    PlayerUnit.java, EnemyUnit.java — Specific implementations
+
+    Stats.java — Encapsulates HP, ATK, MOV, etc.
+
+ai/ # Enemy AI behaviors
+
+    EnemyAI.java — Basic pathfinding / behavior logic
+
+input/ # Input handling
+
+    MouseHandler.java, InputManager.java — For managing mouse clicks, hover, etc.
+
+ui/ # UI elements like health bars, turn indicators
+
+    HUD.java — Health bars, turn indicator
+
+    EndScreen.java — Win/loss screens
+
+floor/ # Procedural generation and floor management
+
+    FloorGenerator.java — Procedural layout
+
+    FloorManager.java — Handles transitions between floors
+
+assets/ # Static assets (if any), like sounds or images
+
+Main.java # Entry point
